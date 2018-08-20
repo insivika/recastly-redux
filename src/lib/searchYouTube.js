@@ -11,6 +11,8 @@ var searchYouTube = ({key, query, max = 5}, callback) => {
       if (callback) {
         callback(items);
       }
+
+      console.log('Received', items)
     })
     .fail(({responseJSON}) => {
       responseJSON.error.errors.forEach((err) =>
