@@ -8,8 +8,10 @@ var handleVideoSearch = (q) => {
 
   var options = {
     key: YOUTUBE_API_KEY,
-    query: q
+    query: q,
+    max: 5
   }
+
 
   //TODO:  Write an asynchronous action to handle a video search!
   return (dispatch) => {

@@ -7,6 +7,8 @@ var searchYouTube = ({key, query, max = 5}, callback) => {
     type: 'video',
     videoEmbeddable: 'true'
   })
+
+
     .done(({items}) => {
       if (callback) {
         callback(items);
@@ -15,6 +17,7 @@ var searchYouTube = ({key, query, max = 5}, callback) => {
       console.log('Received', items)
     })
     .fail(({responseJSON}) => {
+      console.log(responseJSON)
       responseJSON.error.errors.forEach((err) =>
         console.error(err)
       );
